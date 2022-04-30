@@ -1,11 +1,11 @@
 import React from "react";
-import ProductItems from "./components/ProductItems";
+import Products from "./components/Products";
 
 function App() {
   return (
     <>
       <h1>React-Redux-Ecommerce</h1>
-      <ProductItems />
+      <Products />
     </>
   );
 }

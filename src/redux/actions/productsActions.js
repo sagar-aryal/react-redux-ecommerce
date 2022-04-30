@@ -1,24 +1,24 @@
-import * as actionType from "./index.js";
+import { actionTypes } from "../constants/index.js";
 
 /* action creaters */
 
 export const setProducts = (products) => {
   return {
-    type: actionType.SET_PRODUCTS,
+    type: actionTypes.SET_PRODUCTS,
     payload: products,
   };
 };
 
 export const selectedProducts = (products) => {
   return {
-    type: actionType.SELECTED_PRODUCTS,
+    type: actionTypes.SELECTED_PRODUCTS,
     payload: products,
   };
 };
 
 export const deleteProducts = (products) => {
   return {
-    type: actionType.DELETE_PRODUCTS,
+    type: actionTypes.DELETE_PRODUCTS,
     payload: products,
   };
 };

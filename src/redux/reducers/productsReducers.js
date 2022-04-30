@@ -1,23 +1,17 @@
-import { DELETE_PRODUCTS, SELECTED_PRODUCTS, SET_PRODUCTS } from "../actions";
+import { actionTypes } from "../constants/index";
 
 const initialState = {
-  products: [
-    {
-      id: 1,
-      fullname: "Sagar",
-      job: "Software Developer",
-    },
-  ],
+  products: [],
 };
 
 export const productsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_PRODUCTS:
-      return state;
-    case SELECTED_PRODUCTS:
-      return state;
-    case DELETE_PRODUCTS:
-      return state;
+    case actionTypes.SET_PRODUCTS:
+      return { ...state, products: action.products };
+    case actionTypes.SELECTED_PRODUCTS:
+      return { state, ...action.products };
+    case actionTypes.DELETE_PRODUCTS:
+      return {};
     default:
       return state;
   }
